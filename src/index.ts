@@ -25,7 +25,11 @@ async function main() {
     }
 
     const initialSquare = [] as Square[];
-    const squares = getSquaresWithoutOverlapping(initialSquare, 70, 50);
+    const squares = getSquaresWithoutOverlapping(
+      initialSquare,
+      heightNumber,
+      widthNumber
+    );
 
     console.log(
       `\nFor height ${height} and width ${width} the number of squares are: ${squares.length}`

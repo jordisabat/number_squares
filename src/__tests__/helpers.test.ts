@@ -16,7 +16,7 @@ describe("getSquaresWithoutOverlapping", () => {
     expect(result.length).toEqual(0);
   });
 
-  it("if height and width are the same should return one squares", () => {
+  it("if height and width are the same should return one square", () => {
     const squares: Square[] = [];
     const height = 70;
     const width = 70;
@@ -84,5 +84,18 @@ describe("getSquaresWithoutOverlapping", () => {
     expect(result[4].side).toBe(10);
     expect(result[4].position.x).toBe(60);
     expect(result[4].position.y).toBe(40);
+  });
+
+  it("if width and heigh are the same, should return a single square", () => {
+    const squares: Square[] = [];
+    const height = 50;
+    const width = 50;
+    const result = getSquaresWithoutOverlapping(squares, height, width);
+
+    expect(result.length).toEqual(1);
+
+    expect(result[0].side).toBe(50);
+    expect(result[0].position.x).toBe(0);
+    expect(result[0].position.y).toBe(0);
   });
 });
